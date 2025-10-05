@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Shrushti! 🎉</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+        
+        .screen {
+            display: none;
+            max-width: 1100px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .active {
+            display: block;
+            animation: bounceIn 1s ease;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .header {
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #ff6b6b;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #ff6b6b;
+            font-size: 2rem;
+            margin: 30px 0 15px;
+        }
+        
+        h3 {
+            color: #4ecdc4;
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+        }
+        
+        .subtitle {
+            color: #ff9a9e;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .birthday-date {
+            background-color: #ffd166;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .message {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            text-align: left;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #ff9a9e;
+        }
+        
+        .cake-container {
+            margin: 30px 0;
+            position: relative;
+            height: 200px;
+        }
+        
+        .cake {
+            position: relative;
+            width: 200px;
+            height: 120px;
+            margin: 0 auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .cake:hover {
+            transform: scale(1.1);
+        }
+        
+        .cake-base {
+            width: 200px;
+            height: 60px;
+            background: #ff9a9e;
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        .cake-middle {
+            width: 160px;
+            height: 40px;
+            background: #ffd166;
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            bottom: 60px;
+            left: 20px;
+        }
+        
+        .cake-top {
+            width: 120px;
+            height: 30px;
+            background: #a0e7e5;
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            bottom: 100px;
+            left: 40px;
+        }
+        
+        .candle {
+            width: 10px;
+            height: 40px;
+            background: #ff6b6b;
+            position: absolute;
+            bottom: 130px;
+            left: 95px;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .flame {
+            width: 15px;
+            height: 25px;
+            background: #ffd166;
+            border-radius: 50% 50% 20% 20%;
+            position: absolute;
+            bottom: 170px;
+            left: 92.5px;
+            animation: flicker 0.5s infinite alternate;
+            box-shadow: 0 0 10px #ff9a9e;
+        }
+        
+        @keyframes flicker {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        .balloons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .balloon {
+            width: 60px;
+            height: 70px;
+            border-radius: 50%;
+            position: relative;
+            animation: float 5s infinite ease-in-out;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .balloon:hover {
+            transform: scale(1.2);
+        }
+        
+        .balloon:before {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 40px;
+            background: #333;
+        }
+        
+        .balloon:nth-child(1) {
+            background: #ff6b6b;
+            animation-delay: 0s;
+        }
+        
+        .balloon:nth-child(2) {
+            background: #4ecdc4;
+            animation-delay: 0.5s;
+        }
+        
+        .balloon:nth-child(3) {
+            background: #ffd166;
+            animation-delay: 1s;
+        }
+        
+        .balloon:nth-child(4) {
+            background: #a0e7e5;
+            animation-delay: 1.5s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6b6b;
+            opacity: 0.7;
+            animation: confetti-fall 5s linear infinite;
+        }
+        
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(1000px) rotate(360deg); opacity: 0; }
+        }
+        
+        .music-control {
+            margin-top: 20px;
+        }
+        
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 5px;
+        }
+        
+        button:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+        }
+        
+        .audio-options {
+            margin-top: 10px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .question {
+            font-size: 1.8rem;
+            margin: 30px 0;
+            color: #ff6b6b;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .yes-btn {
+            background: #4ecdc4;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+        }
+        
+        .no-btn {
+            background: #ff9a9e;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            position: relative;
+            transition: all 0.1s ease;
+        }
+        
+        .no-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .no-btn.moving {
+            transition: all 0.5s ease;
+        }
+        
+        .interactive-section {
+            margin: 40px 0;
+            padding: 20px;
+            background: #f0f8ff;
+            border-radius: 15px;
+            border: 3px dashed #ff6b6b;
+        }
+        
+        .cat-game {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .cat-container {
+            position: relative;
+            height: 200px;
+            margin: 20px 0;
+            background: linear-gradient(135deg, #ffd166 0%, #ff9a9e 100%);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .interactive-cat {
+            position: absolute;
+            font-size: 4rem;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            user-select: none;
+        }
+        
+        .cat-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+        }
+        
+        .stat {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .personality-traits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .trait {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .trait:hover {
+            transform: translateY(-5px);
+        }
+        
+        .trait-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .message-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        
+        .wish-box {
+            background: linear-gradient(135deg, #a0e7e5 0%, #b4f8c8 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .game-btn {
+            background: #ffd166;
+            color: #333;
+            margin: 10px;
+        }
+        
+        .dancing-text {
+            animation: dance 2s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes dance {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+        
+        .cat-message {
+            position: absolute;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .message {
+                font-size: 1rem;
+                padding: 15px;
+            }
+            
+            .question {
+                font-size: 1.5rem;
+            }
+            
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Verification Screen -->
+    <div id="verificationScreen" class="screen active">
+        <div class="header">
+            <h1>🎂 Birthday Access 🎂</h1>
+            <div class="subtitle">Special content for a special person!</div>
+        </div>
+        
+        <div class="question">Are you my pookie chubby friend <span class="dancing-text">Shrushti</span>?</div>
+        
+        <div class="button-container">
+            <button id="yesBtn" class="yes-btn">Yes, I am Shrushti! 🎉</button>
+            <button id="noBtn" class="no-btn">No, I'm not 😢</button>
+        </div>
+        
+        <div class="footer">
+            If you're not the birthday girl, please don't proceed! 🎂
+        </div>
+    </div>
+    
+    <!-- Birthday Screen -->
+    <div id="birthdayScreen" class="screen">
+        <div class="header">
+            <h1>Happy Birthday <span class="dancing-text">Shrushti</span>! 🎉</h1>
+            <div class="subtitle">To my amazing pookie chubby friend!</div>
+            <div class="birthday-date">🎂 October 6th 🎂</div>
+        </div>
+        
+        <div class="cake-container">
+            <div class="cake">
+                <div class="cake-base"></div>
+                <div class="cake-middle"></div>
+                <div class="cake-top"></div>
+                <div class="candle"></div>
+                <div class="flame"></div>
+            </div>
+        </div>
+        
+        <div class="balloons">
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+        </div>
+
+        <!-- Personal Message -->
+        <div class="message">
+            <p>My Dearest Shrushti,</p>
+            <p>On this magnificent October 6th, as you celebrate another trip around the sun, I want you to know how incredibly special you are! You're not just my pookie chubby friend - you're a burst of sunshine in everyone's life! 🌞</p>
+            <p>Your creativity knows no bounds, your kindness touches every heart you meet, and your ability to make people feel valued is truly magical. Whether you're coming up with brilliant ideas, having deep conversations with your bestie, or just being your wonderful self, you make the world a better place.</p>
+            <p>May this year bring you endless joy, purring cats, creative inspiration, and all the happiness you so richly deserve. You're amazing just the way you are, and I'm so grateful to have you in my life!</p>
+            <p>With all my love and the biggest birthday hugs,</p>
+            <p>Your forever friend 💖</p>
+        </div>
+
+        <!-- Interactive Cat Game -->
+        <div class="interactive-section">
+            <h2>🐱 Play with Shrushti's Virtual Cat! 🐱</h2>
+            <div class="cat-game">
+                <div class="cat-stats">
+                    <div class="stat">Happiness: <span id="happiness">50</span> ❤️</div>
+                    <div class="stat">Energy: <span id="energy">50</span> ⚡</div>
+                    <div class="stat">Playfulness: <span id="playfulness">50</span> 🎾</div>
+                </div>
+                
+                <div class="cat-container" id="catContainer">
+                    <div class="interactive-cat" id="interactiveCat">🐈</div>
+                </div>
+                
+                <div class="cat-controls">
+                    <button class="game-btn" id="petCat">Pet the Cat 🖐️</button>
+                    <button class="game-btn" id="feedCat">Give Treat 🍪</button>
+                    <button class="game-btn" id="playWithCat">Play with Toy 🎾</button>
+                    <button class="game-btn" id="catDance">Make Cat Dance 💃</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personality Traits -->
+        <div class="interactive-section">
+            <h2>🌟 What Makes Shrushti So Special 🌟</h2>
+            <div class="personality-traits">
+                <div class="trait">
+                    <div class="trait-icon">🐱</div>
+                    <div><strong>Cat Whisperer</strong></div>
+                    <div>Animals adore you! Your love for cats is absolutely purr-fect! 🐾</div>
+                </div>
+                <div class="trait">
+                    <div class="trait-icon">🎨</div>
+                    <div><strong>Creative Genius</strong></div>
+                    <div>Your imagination knows no limits! You turn ordinary into extraordinary! ✨</div>
+                </div>
+                <div class="trait">
+                    <div class="trait-icon">💬</div>
+                    <div><strong>Amazing Conversationalist</strong></div>
+                    <div>You make every chat memorable and meaningful! Your bestie is so lucky! 💕</div>
+                </div>
+                <div class="trait">
+                    <div class="trait-icon">🤝</div>
+                    <div><strong>Super Cooperative</strong></div>
+                    <div>Teamwork makes the dream work with you! You're everyone's favorite teammate! 🌈</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Birthday Wishes -->
+        <div class="wish-box">
+            <h2>🎁 Birthday Wishes for Shrushti 🎁</h2>
+            <div class="message-box">
+                <p>✨ <strong>My wish for you this year:</strong></p>
+                <p>May your days be filled with creative inspiration that flows like a never-ending river! May you discover new passions that set your soul on fire! 🔥</p>
+                <p>May you have countless cozy moments with furry friends and heart-to-heart conversations that leave you feeling understood and cherished. May your laughter be contagious and your smile bright enough to light up the darkest rooms! 💫</p>
+                <p>May opportunities knock on your door and may you have the courage to welcome them with open arms. Remember that you are capable of achieving absolutely anything you set your magnificent mind to! 🌟</p>
+                <p>Most importantly, may you always recognize how incredibly wonderful you are - with your unique blend of creativity, kindness, humor, and that special sparkle that makes you, YOU! 💖</p>
+            </div>
+            
+            <button id="addWish" class="game-btn">Add Your Own Wish! 🌠</button>
+            <div id="customWishes"></div>
+        </div>
+
+        <!-- Fun Interactive Elements -->
+        <div class="interactive-section">
+            <h2>🎮 Birthday Fun & Games 🎮</h2>
+            <div class="cat-game">
+                <h3>Make the Birthday Cat Talk! 🐱</h3>
+                <button class="game-btn" id="catCompliment">Get a Cat Compliment</button>
+                <button class="game-btn" id="catJoke">Hear a Cat Joke</button>
+                <button class="game-btn" id="catFact">Learn a Cat Fact</button>
+                <div id="catSpeech" class="message-box" style="min-height: 60px; text-align: center; font-style: italic;">
+                    The cat is waiting to talk to you! 🐾
+                </div>
+            </div>
+        </div>
+        
+        <div class="music-control">
+            <button id="playBtn">🎵 Play Happy Birthday</button>
+            <button id="stopBtn">⏹️ Stop Music</button>
+            <button id="partyMode">🎉 Activate Party Mode!</button>
+        </div>
+        
+        <div class="footer">
+            Made with infinite love 💖 for Shrushti's special day on October 6th! May your birthday be as wonderful as you are! 🎂✨
+        </div>
+    </div>
+    
+    <script>
+        // Screen management
+        const verificationScreen = document.getElementById('verificationScreen');
+        const birthdayScreen = document.getElementById('birthdayScreen');
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+
+        // Cat game variables
+        let happiness = 50;
+        let energy = 50;
+        let playfulness = 50;
+        let catMessages = [];
+        let partyMode = false;
+
+        // Create confetti
+        function createConfetti() {
+            const colors = ['#ff6b6b', '#4ecdc4', '#ffd166', '#a0e7e5', '#ff9a9e'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                document.body.appendChild(confetti);
+            }
+        }
+
+        // Audio functionality
+        class BirthdayAudio {
+            constructor() {
+                this.audioContext = null;
+                this.isPlaying = false;
+                this.currentOscillator = null;
+            }
+
+            init() {
+                try {
+                    this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    return true;
+                } catch (e) {
+                    console.error('Web Audio API not supported');
+                    return false;
+                }
+            }
+
+            // Play Happy Birthday melody
+            playHappyBirthday() {
+                if (!this.audioContext && !this.init()) return;
+
+                if (this.isPlaying) {
+                    this.stop();
+                    return;
+                }
+
+                this.isPlaying = true;
+                
+                const notes = [
+                    {note: 392, duration: 0.5}, {note: 392, duration: 0.5}, {note: 440, duration: 1},
+                    {note: 392, duration: 1}, {note: 523, duration: 1}, {note: 494, duration: 2},
+                    {note: 392, duration: 0.5}, {note: 392, duration: 0.5}, {note: 440, duration: 1},
+                    {note: 392, duration: 1}, {note: 587, duration: 1}, {note: 523, duration: 2},
+                    {note: 392, duration: 0.5}, {note: 392, duration: 0.5}, {note: 784, duration: 1},
+                    {note: 659, duration: 1}, {note: 523, duration: 1}, {note: 494, duration: 1},
+                    {note: 440, duration: 2}, {note: 698, duration: 0.5}, {note: 698, duration: 0.5},
+                    {note: 659, duration: 1}, {note: 523, duration: 1}, {note: 587, duration: 1},
+                    {note: 523, duration: 3}
+                ];
+
+                this.playNotes(notes, 0);
+            }
+
+            // Play cheerful tune
+            playCheerfulTune() {
+                if (!this.audioContext && !this.init()) return;
+
+                if (this.isPlaying) {
+                    this.stop();
+                    return;
+                }
+
+                this.isPlaying = true;
+                
+                const notes = [
+                    {note: 523, duration: 0.3}, {note: 587, duration: 0.3}, {note: 659, duration: 0.3},
+                    {note: 698, duration: 0.3}, {note: 784, duration: 0.6}, {note: 784, duration: 0.6},
+                    {note: 659, duration: 0.3}, {note: 659, duration: 0.3}, {note: 523, duration: 0.3},
+                    {note: 523, duration: 0.3}, {note: 587, duration: 0.6}, {note: 587, duration: 0.6},
+                    {note: 523, duration: 1.2}
+                ];
+
+                this.playNotes(notes, 0);
+            }
+
+            // Play cat meow sound
+            playCatMeow() {
+                if (!this.audioContext && !this.init()) return;
+
+                const oscillator = this.audioContext.createOscillator();
+                const gainNode = this.audioContext.createGain();
+
+                oscillator.connect(gainNode);
+                gainNode.connect(this.audioContext.destination);
+
+                oscillator.frequency.setValueAtTime(800, this.audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(300, this.audioContext.currentTime + 0.5);
+                oscillator.type = 'sawtooth';
+
+                const now = this.audioContext.currentTime;
+                gainNode.gain.setValueAtTime(0, now);
+                gainNode.gain.linearRampToValueAtTime(0.3, now + 0.1);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.5);
+
+                oscillator.start(now);
+                oscillator.stop(now + 0.5);
+            }
+
+            playNotes(notes, index) {
+                if (index >= notes.length || !this.isPlaying) {
+                    this.stop();
+                    return;
+                }
+
+                const note = notes[index];
+                const oscillator = this.audioContext.createOscillator();
+                const gainNode = this.audioContext.createGain();
+
+                oscillator.connect(gainNode);
+                gainNode.connect(this.audioContext.destination);
+
+                oscillator.frequency.value = note.note;
+                oscillator.type = 'sine';
+
+                const now = this.audioContext.currentTime;
+                gainNode.gain.setValueAtTime(0, now);
+                gainNode.gain.linearRampToValueAtTime(0.3, now + 0.05);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, now + note.duration);
+
+                oscillator.start(now);
+                oscillator.stop(now + note.duration);
+
+                this.currentOscillator = oscillator;
+
+                setTimeout(() => {
+                    if (this.isPlaying) {
+                        this.playNotes(notes, index + 1);
+                    }
+                }, note.duration * 800);
+            }
+
+            stop() {
+                this.isPlaying = false;
+                if (this.currentOscillator) {
+                    this.currentOscillator.stop();
+                    this.currentOscillator = null;
+                }
+            }
+        }
+
+        // Initialize audio
+        const birthdayAudio = new BirthdayAudio();
+
+        // Cat game functions
+        function updateCatStats() {
+            document.getElementById('happiness').textContent = happiness;
+            document.getElementById('energy').textContent = energy;
+            document.getElementById('playfulness').textContent = playfulness;
+        }
+
+        function moveCat() {
+            const cat = document.getElementById('interactiveCat');
+            const container = document.getElementById('catContainer');
+            const maxX = container.offsetWidth - 80;
+            const maxY = container.offsetHeight - 80;
+            
+            const newX = Math.random() * maxX;
+            const newY = Math.random() * maxY;
+            
+            cat.style.left = newX + 'px';
+            cat.style.top = newY + 'px';
+        }
+
+        function showCatMessage(message) {
+            const cat = document.getElementById('interactiveCat');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'cat-message';
+            messageDiv.textContent = message;
+            messageDiv.style.left = (cat.offsetLeft + 60) + 'px';
+            messageDiv.style.top = (cat.offsetTop - 40) + 'px';
+            
+            document.getElementById('catContainer').appendChild(messageDiv);
+            
+            messageDiv.style.opacity = '1';
+            
+            setTimeout(() => {
+                messageDiv.style.opacity = '0';
+                setTimeout(() => {
+                    messageDiv.remove();
+                }, 300);
+            }, 2000);
+        }
+
+        // Cat speech arrays
+        const catCompliments = [
+            "You're as wonderful as Shrushti! 🌟",
+            "Your kindness shines brighter than catnip! ✨",
+            "You make every day feel like a birthday! 🎉",
+            "Your friendship is the best gift ever! 🎁",
+            "You're purr-fect just the way you are! 🐱"
+        ];
+
+        const catJokes = [
+            "Why did the cat join the Red Cross? Because she wanted to be a first-aid kit! 😹",
+            "What do you call a cat that can sing? A mew-sician! 🎵",
+            "Why was the cat sitting on the computer? To keep an eye on the mouse! 🖱️",
+            "What's a cat's favorite color? Purr-ple! 🟣"
+        ];
+
+        const catFacts = [
+            "Cats have 32 muscles in each ear! That's why Shrushti's so good at listening! 👂",
+            "A group of cats is called a clowder - just like your group of friends! 👯",
+            "Cats can make over 100 different sounds - almost as many as your creative ideas! 🎨",
+            "Cats sleep for 70% of their lives - they know how to relax like a pro! 😴"
+        ];
+
+        // Event listeners for verification screen
+        yesBtn.addEventListener('click', function() {
+            verificationScreen.classList.remove('active');
+            birthdayScreen.classList.add('active');
+            createConfetti();
+            birthdayAudio.init();
+            birthdayAudio.playHappyBirthday();
+            
+            // Start cat movement
+            setInterval(moveCat, 3000);
+        });
+
+        let moveCount = 0;
+        noBtn.addEventListener('mouseover', function() {
+            moveCount++;
+            const button = this;
+            const maxX = window.innerWidth - button.offsetWidth - 40;
+            const maxY = window.innerHeight - button.offsetHeight - 40;
+            
+            let newX, newY;
+            if (moveCount < 5) {
+                newX = Math.random() * maxX;
+                newY = Math.random() * maxY;
+            } else {
+                const side = Math.floor(Math.random() * 4);
+                switch(side) {
+                    case 0: newX = Math.random() * maxX; newY = 20; break;
+                    case 1: newX = maxX - 20; newY = Math.random() * maxY; break;
+                    case 2: newX = Math.random() * maxX; newY = maxY - 20; break;
+                    case 3: newX = 20; newY = Math.random() * maxY; break;
+                }
+            }
+            
+            button.style.position = 'fixed';
+            button.style.left = newX + 'px';
+            button.style.top = newY + 'px';
+            button.classList.add('moving');
+            
+            setTimeout(() => {
+                button.classList.remove('moving');
+            }, 500);
+        });
+
+        // Cat game event listeners
+        document.getElementById('petCat').addEventListener('click', function() {
+            happiness = Math.min(100, happiness + 10);
+            energy = Math.min(100, energy + 5);
+            birthdayAudio.playCatMeow();
+            showCatMessage("Purrrr... thank you! 🐾");
+            updateCatStats();
+        });
+
+        document.getElementById('feedCat').addEventListener('click', function() {
+            energy = Math.min(100, energy + 15);
+            happiness = Math.min(100, happiness + 5);
+            birthdayAudio.playCatMeow();
+            showCatMessage("Yum! More treats please! 🍪");
+            updateCatStats();
+        });
+
+        document.getElementById('playWithCat').addEventListener('click', function() {
+            playfulness = Math.min(100, playfulness + 15);
+            energy = Math.max(0, energy - 10);
+            birthdayAudio.playCatMeow();
+            showCatMessage("This is so much fun! 🎾");
+            updateCatStats();
+        });
+
+        document.getElementById('catDance').addEventListener('click', function() {
+            const cat = document.getElementById('interactiveCat');
+            cat.style.animation = 'dance 0.5s infinite';
+            setTimeout(() => {
+                cat.style.animation = '';
+            }, 2000);
+            showCatMessage("I'm dancing for Shrushti! 💃");
+            birthdayAudio.playCheerfulTune();
+        });
+
+        // Cat speech event listeners
+        document.getElementById('catCompliment').addEventListener('click', function() {
+            const compliment = catCompliments[Math.floor(Math.random() * catCompliments.length)];
+            document.getElementById('catSpeech').textContent = compliment;
+            birthdayAudio.playCatMeow();
+        });
+
+        document.getElementById('catJoke').addEventListener('click', function() {
+            const joke = catJokes[Math.floor(Math.random() * catJokes.length)];
+            document.getElementById('catSpeech').textContent = joke;
+            birthdayAudio.playCatMeow();
+        });
+
+        document.getElementById('catFact').addEventListener('click', function() {
+            const fact = catFacts[Math.floor(Math.random() * catFacts.length)];
+            document.getElementById('catSpeech').textContent = fact;
+            birthdayAudio.playCatMeow();
+        });
+
+        // Wish functionality
+        document.getElementById('addWish').addEventListener('click', function() {
+            const wishes = [
+                "May your creativity always flow like a river! 🌊",
+                "Wishing you endless cuddles with furry friends! 🐈",
+                "May every day bring new reasons to smile! 😊",
+                "Here's to adventures that become beautiful stories! 📖",
+                "May your heart always be full of joy and laughter! ❤️"
+            ];
+            const wish = wishes[Math.floor(Math.random() * wishes.length)];
+            
+            const wishElement = document.createElement('div');
+            wishElement.className = 'message-box';
+            wishElement.style.margin = '10px 0';
+            wishElement.style.animation = 'fadeIn 0.5s ease';
+            wishElement.innerHTML = `<p>✨ ${wish}</p>`;
+            
+            document.getElementById('customWishes').appendChild(wishElement);
+        });
+
+        // Party mode
+        document.getElementById('partyMode').addEventListener('click', function() {
+            partyMode = !partyMode;
+            if (partyMode) {
+                document.body.style.animation = 'partyLights 1s infinite';
+                createConfetti();
+                birthdayAudio.playCheerfulTune();
+                this.textContent = '🎉 Party Mode: ON!';
+            } else {
+                document.body.style.animation = '';
+                this.textContent = '🎉 Activate Party Mode!';
+            }
+        });
+
+        // Add party lights animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes partyLights {
+                0% { filter: hue-rotate(0deg); }
+                25% { filter: hue-rotate(90deg); }
+                50% { filter: hue-rotate(180deg); }
+                75% { filter: hue-rotate(270deg); }
+                100% { filter: hue-rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Event listeners for birthday screen
+        document.getElementById('playBtn').addEventListener('click', () => {
+            birthdayAudio.playHappyBirthday();
+        });
+
+        document.getElementById('stopBtn').addEventListener('click', () => {
+            birthdayAudio.stop();
+        });
+
+        // Add interactive elements
+        document.querySelector('.cake')?.addEventListener('click', function() {
+            birthdayAudio.playHappyBirthday();
+            alert('Make a wish and blow out the candle Shrushti! 🎂✨ Your dreams are waiting to come true!');
+        });
+        
+        // Add more balloons on click
+        document.querySelector('.balloons')?.addEventListener('click', function() {
+            const balloonsContainer = document.querySelector('.balloons');
+            const newBalloon = document.createElement('div');
+            newBalloon.className = 'balloon';
+            const colors = ['#ff6b6b', '#4ecdc4', '#ffd166', '#a0e7e5', '#ff9a9e'];
+            newBalloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            newBalloon.style.animationDelay = Math.random() * 2 + 's';
+            balloonsContainer.appendChild(newBalloon);
+        });
+
+        // Initialize confetti
+        createConfetti();
+    </script>
+</body>
+</html>
